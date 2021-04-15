@@ -3,17 +3,21 @@ var PAPER = "papel"
 var SICSSORS = "tijera"
 
 var start = function(p1,p2){
-    if(p1 != p2) {
-        if (p1 === ROCK && p2 === SICSSORS){
-            console.log("Win with .." + ROCK);
-        }else if(p1 === PAPER && p2 === ROCK){
-            console.log("Win with .." + PAPER);
-        }else if(p1 === SICSSORS && p2 === PAPER){
-            console.log("Win with .." + SICSSORS);
-        } else{
-            console.log("loser");
-        }
-    }else if(p1 === p2){
-        console.log("empate perro :,V")
+    switch(p1 != p2){
+        case p1 === ROCK && p2 === SICSSORS:
+            alert("You win with ..." + ROCK);
+            break;
+        case p1 === PAPER && p2 === ROCK:
+            alert("You win with ..." + PAPER);
+            break;
+        case p1 === SICSSORS &&  p2 === PAPER:
+            alert("You win with ..." + SICSSORS);
+            break;
+        default:
+            alert("You lost..! :,( ");
+    };switch(true){
+        case p1 === p2:
+            alert("Drawn");
+            break;
     }
-};
+    };
